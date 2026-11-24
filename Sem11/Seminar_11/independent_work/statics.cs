@@ -27,5 +27,7 @@ public enum Commands
 {
     none,
     quit,
-    help
+    help,
+    attack,
+    status
 }

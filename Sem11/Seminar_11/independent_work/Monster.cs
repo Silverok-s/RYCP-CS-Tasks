@@ -13,7 +13,7 @@ namespace independent_work
         public bool IsDead => HP == 0;
 
         // Здесь добавьте события по изменению здоровья и смерти.
-        //.
+        public event Action<Monster, int, int>? HPChanged;
 
         private int _hp;
 
@@ -33,8 +33,8 @@ namespace independent_work
 
                 HPChanged?.Invoke(this, oldHP, newHP); // Вызов события здоровья.
 
-                if (oldHP > 0 && newHP == 0)
-                    Died?.Invoke(this); // Вызов события смерти.
+                //if (oldHP > 0 && newHP == 0)
+                    //Died?.Invoke(this); // Вызов события смерти.
             }
         }
 
